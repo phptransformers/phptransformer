@@ -1,0 +1,46 @@
+{
+    "name": "robloach/consolidate",
+    "description": "Template engine consolidation library for PHP.",
+    "keywords": [
+        "league",
+        "package"
+    ],
+    "homepage": "https://github.com/robloach/consolidate",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rob Loach",
+            "homepage": "http://robloach.net"
+        }
+    ],
+    "require": {
+        "php" : ">=5.3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "4.*",
+        "smarty/smarty": "~3.1",
+        "twig/twig": "~1.16.2"
+    },
+    "suggest": {
+        "smarty/smarty": "Adds support for rendering Smarty templates.",
+        "twig/twig": "Adds support for rendering Twig templates."
+    },
+    "autoload": {
+        "psr-4": {
+            "RobLoach\\Consolidate\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "RobLoach\\Consolidate\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
