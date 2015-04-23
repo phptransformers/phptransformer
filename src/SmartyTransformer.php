@@ -1,17 +1,14 @@
 <?php
 
-namespace RobLoach\Consolidate;
+namespace PhpTransformers\PhpTransformer;
 
 use Smarty;
 
 /**
  * Symfony Templating Engine.
  */
-class SmartyEngine implements EngineInterface
+class SmartyTransformer extends Transformer
 {
-    /**
-     * The Smarty template engine instance.
-     */
     protected $smarty;
 
     /**
@@ -53,24 +50,24 @@ class SmartyEngine implements EngineInterface
         return 'smarty';
     }
 
-    /**
-     * Renders a template.
-     *
-     * @param string $name       A template name or a TemplateReferenceInterface instance
-     * @param array  $parameters An array of parameters to pass to the template
-     *
-     * @return string The evaluated template as a string
-     *
-     * @api
-     */
-    public function render($template, array $parameters = array())
+    public function renderFile($file, array $locals = array())
     {
-        foreach ($parameters as $key => $value) {
+        return $this->fetch($file, $locals, false);
+    }
+
+    public function render($template, array $locals = array())
+    {
+        return $this->fetch($template, $locals, true);
+    }
+
+    protected function fetch($template, array $locals = array(), $string = false)
+    {
+        foreach ($locals as $key => $value) {
             $this->smarty->assign($key, $value);
         }
 
         // Render the template using Smarty.
-        $output = $this->smarty->fetch('string:' . $template);
+        $output = $this->smarty->fetch(($string ? 'string:' : '') . $template);
 
         return trim($output);
     }
