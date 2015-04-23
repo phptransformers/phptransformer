@@ -1,12 +1,12 @@
 [![PHPTransformer](logo.png)](#supported-transformers)
 # PHPTransformer
 
-[![Latest Version](https://img.shields.io/github/release/RobLoach/phptransformer.svg?style=flat-square)](https://github.com/RobLoach/phptransformer/releases)
+[![Latest Version](https://img.shields.io/github/release/phptransformers/phptransformer.svg?style=flat-square)](https://github.com/phptransformers/phptransformer/releases)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Build Status](https://img.shields.io/travis/RobLoach/phptransformer/master.svg?style=flat-square)](https://travis-ci.org/RobLoach/phptransformer)
-[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/RobLoach/phptransformer.svg?style=flat-square)](https://scrutinizer-ci.com/g/RobLoach/phptransformer/code-structure)
-[![Quality Score](https://img.shields.io/scrutinizer/g/RobLoach/phptransformer.svg?style=flat-square)](https://scrutinizer-ci.com/g/RobLoach/phptransformer)
-[![Total Downloads](https://img.shields.io/packagist/dt/RobLoach/phptransformers.svg?style=flat-square)](https://packagist.org/packages/RobLoach/phptransformer)
+[![Build Status](https://img.shields.io/travis/phptransformers/phptransformer/master.svg?style=flat-square)](https://travis-ci.org/phptransformers/phptransformer)
+[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/phptransformers/phptransformer.svg?style=flat-square)](https://scrutinizer-ci.com/g/phptransformers/phptransformer/code-structure)
+[![Quality Score](https://img.shields.io/scrutinizer/g/phptransformers/phptransformer.svg?style=flat-square)](https://scrutinizer-ci.com/g/phptransformers/phptransformer)
+[![Total Downloads](https://img.shields.io/packagist/dt/phptransformers/phptransformers.svg?style=flat-square)](https://packagist.org/packages/phptransformers/phptransformer)
 
 Common interface to manipulate strings/data with any transformer. Great for use in templating libraries, static site generators, web frameworks, and more. Inspired by [JSTransformers](http://github.com/jstransformers).
 
