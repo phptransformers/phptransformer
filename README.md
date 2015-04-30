@@ -77,6 +77,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 ## Credits
 
 - [Rob Loach](https://github.com/RobLoach)
+- [stoeffel](https://github.com/stoeffel)
 - [All Contributors](../../contributors)
 
 ## License
