@@ -1,6 +1,6 @@
-[![PHPTransformer](logo.png)](#supported-transformers)
 # PHPTransformer
 
+<a href="http://github.com/phptransformers/phptransformer"><img src="https://raw.githubusercontent.com/phptransformers/phptransformer/master/logo.png" align="right" height="140px"></a>
 [![Latest Version](https://img.shields.io/github/release/phptransformers/phptransformer.svg?style=flat-square)](https://github.com/phptransformers/phptransformer/releases)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Build Status](https://img.shields.io/travis/phptransformers/phptransformer/master.svg?style=flat-square)](https://travis-ci.org/phptransformers/phptransformer)
@@ -16,6 +16,7 @@ To use each of these transformers, you will also need to `composer require` them
 
 * [Twig](http://twig.sensiolabs.org)
 * [Smarty](http://www.smarty.net)
+* [Mustache](https://github.com/phptransformers/mustache)
 
 ## Install
 
