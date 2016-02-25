@@ -14,9 +14,12 @@ Common interface to manipulate strings/data with any transformer. Great for use 
 
 To use each of these transformers, you will also need to `composer require` them in your project.
 
-* [Twig](http://twig.sensiolabs.org)
-* [Smarty](http://www.smarty.net)
+* [Twig](https://github.com/phptransformers/twig)
+* [Smarty](https://github.com/phptransformers/smarty)
 * [Mustache](https://github.com/phptransformers/mustache)
+* [Latte](https://github.com/phptransformers/latte)
+* [StringTemplate](https://github.com/phptransformers/string-template)
+* [Plates](https://github.com/phptransformers/plates)
 
 ## Install
 
@@ -29,7 +32,8 @@ $ composer require phptransformers/phptransformer
 ## Usage
 
 ``` php
-$transformer = new PhpTransformers\PhpTransformer\TwigTransformer();
+// With "phptransfomers/twig" package
+$transformer = new PhpTransformers\Twig\TwigTransformer();
 echo $transformer->render('Hello, {{ name }}!', array(
 	'name' => 'World'
 ));
@@ -41,9 +45,12 @@ echo $transformer->render('Hello, {{ name }}!', array(
 Before all examples, you will need to load a transformer:
 
 ``` php
-$transformer = new PhpTransformers\PhpTransformer\TwigTransformer();
-$transformer = new PhpTransformers\PhpTransformer\SmartyTransformer();
+$transformer = new PhpTransformers\Twig\TwigTransformer();
+$transformer = new PhpTransformers\Smarty\SmartyTransformer();
+// ... same thing for all other Transformers
 ```
+
+_See each transformers' repository for more details_
 
 ### `->render($template, $locals)`
 
