@@ -85,7 +85,7 @@ class TransformerTest extends \PHPUnit_Framework_TestCase
         $engines[] = array('phptal', 'PHPTALTransformer', 'PhpTransformers\\PHPTAL\\PHPTALTransformer');
         $engines[] = array('dwoo', 'DwooTransformer', 'PhpTransformers\\Dwoo\\DwooTransformer');
         $engines[] = array('text-template', 'TextTemplateTransformer', 'PhpTransformers\\TextTemplate\\TextTemplateTransformer');
-        $engines[] = array('blade', 'BladeTransformer', 'PhpTransformers\\Blade\\BladeTransformer');
+        //$engines[] = array('blade', 'BladeTransformer', 'PhpTransformers\\Blade\\BladeTransformer');// Need PHP >= 5.5.9
         //$engines[] = array('mustache', 'MustacheTransformer', 'PhpTransformers\\Mustache\\MustacheTransformer');
 
         return $engines;

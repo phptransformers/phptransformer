@@ -30,8 +30,7 @@
         "phptransformers/phptal": "dev-master",
         "dwoo/dwoo": "dev-beta",
         "phptransformers/dwoo": "dev-master",
-        "phptransformers/text-template": "dev-master",
-        "phptransformers/blade": "dev-master"
+        "phptransformers/text-template": "dev-master"
     },
     "autoload": {
         "psr-4": {
