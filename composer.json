@@ -1,5 +1,4 @@
 {
-    "title": "PHPTransformer",
     "name": "phptransformers/phptransformer",
     "description": "Normalize the API of any PHPTransformer.",
     "keywords": [
@@ -21,7 +20,17 @@
     "require-dev": {
         "phpunit/phpunit" : "~4.6",
         "scrutinizer/ocular": "~1.1",
-        "squizlabs/php_codesniffer": "~2.3"
+        "squizlabs/php_codesniffer": "~2.3",
+        "phptransformers/twig": "^1.0",
+        "phptransformers/blade": "^1.0",
+        "phptransformers/text-template": "^1.0",
+        "phptransformers/phptal": "^1.0",
+        "phptransformers/dwoo": "^1.0",
+        "phptransformers/mustache": "^1.0",
+        "phptransformers/latte": "^1.0",
+        "phptransformers/string-template": "^1.0",
+        "phptransformers/plates": "^1.0",
+        "phptransformers/smarty": "^1.0"
     },
     "autoload": {
         "psr-4": {
@@ -32,6 +41,18 @@
         "psr-4": {
             "PhpTransformers\\PhpTransformer\\Test\\": "tests"
         }
+    },
+    "suggest": {
+        "phptransformers/twig": "For rendering Twig templates",
+        "phptransformers/blade": "For rendering Laravel Blade templates",
+        "phptransformers/text-template": "For rendering PHPUnit Text-Template templates",
+        "phptransformers/phptal": "For rendering PHPTAL templates",
+        "phptransformers/dwoo": "For rendering Dwoo templates",
+        "phptransformers/mustache": "For rendering Mustache templates",
+        "phptransformers/latte": "For rendering Nette Latte templates",
+        "phptransformers/string-template": "For rendering StringTemplate templates",
+        "phptransformers/plates": "For rendering PHP League Plates templates",
+        "phptransformers/smarty": "For rendering Smarty templates"
     },
     "scripts": {
         "test": "phpunit --colors=always --coverage-text --coverage-clover=coverage.clover",

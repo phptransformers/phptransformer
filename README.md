@@ -14,12 +14,16 @@ Common interface to manipulate strings/data with any transformer. Great for use 
 
 To use each of these transformers, you will also need to `composer require` them in your project.
 
-* [Twig](https://github.com/phptransformers/twig)
+* [Twig](https://github.com/phptransformers/twig) (From SensioLabs/Symfony)
 * [Smarty](https://github.com/phptransformers/smarty)
 * [Mustache](https://github.com/phptransformers/mustache)
-* [Latte](https://github.com/phptransformers/latte)
+* [Latte](https://github.com/phptransformers/latte) (From Nette Framework)
 * [StringTemplate](https://github.com/phptransformers/string-template)
-* [Plates](https://github.com/phptransformers/plates)
+* [Plates](https://github.com/phptransformers/plates) (From The PHP League)
+* [Dwoo](https://github.com/phptransformers/dwoo)
+* [Blade](https://github.com/phptransformers/blade) (From Laravel Framework)
+* [PHPTAL](https://github.com/phptransformers/phptal)
+* [Text-Template](https://github.com/phptransformers/text-template) (From PHPUnit)
 
 ## Install
 
