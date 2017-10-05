@@ -19,6 +19,10 @@ class TransformerTest extends \PHPUnit_Framework_TestCase
      */
     public function testRenderFile($name, $className, $fqcn)
     {
+        if ($name === 'dwoo' && extension_loaded('apc') && ini_get('apc.enabled') && !function_exists('apc_delete_file')) {
+            self::markTestSkipped('The function "apc_delete_file" is required by Dwoo');
+        }
+
         $class = $fqcn;
 
         if (!class_exists($class)) {
@@ -45,6 +49,10 @@ class TransformerTest extends \PHPUnit_Framework_TestCase
      */
     public function testRender($name, $className, $fqcn)
     {
+        if ($name === 'dwoo' && extension_loaded('apc') && ini_get('apc.enabled') && !function_exists('apc_delete_file')) {
+            self::markTestSkipped('The function "apc_delete_file" is required by Dwoo');
+        }
+
         $class = $fqcn;
 
         if (!class_exists($class)) {
