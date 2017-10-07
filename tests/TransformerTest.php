@@ -19,10 +19,19 @@ class TransformerTest extends \PHPUnit_Framework_TestCase
      */
     public function testRenderFile($name, $className, $fqcn)
     {
+        if ($name === 'dwoo' && extension_loaded('apc') && ini_get('apc.enabled') && !function_exists('apc_delete_file')) {
+            self::markTestSkipped('The function "apc_delete_file" is required by Dwoo');
+        }
+
         $class = $fqcn;
+
+        if (!class_exists($class)) {
+            self::markTestSkipped('Renderer "'.$className.'" not installed');
+        }
+
         /** @var TransformerInterface $engine */
         $engine = new $class();
-        $template = "tests/Fixtures/$className.$name";
+        $template = __DIR__."/Fixtures/$className.$name";
         $locals = array(
             'name' => 'Linus',
         );
@@ -40,10 +49,19 @@ class TransformerTest extends \PHPUnit_Framework_TestCase
      */
     public function testRender($name, $className, $fqcn)
     {
+        if ($name === 'dwoo' && extension_loaded('apc') && ini_get('apc.enabled') && !function_exists('apc_delete_file')) {
+            self::markTestSkipped('The function "apc_delete_file" is required by Dwoo');
+        }
+
         $class = $fqcn;
+
+        if (!class_exists($class)) {
+            self::markTestSkipped('Renderer "'.$className.'" not installed');
+        }
+
         /** @var TransformerInterface $engine */
         $engine = new $class();
-        $template = file_get_contents("tests/Fixtures/$className.$name");
+        $template = file_get_contents(__DIR__."/Fixtures/$className.$name");
         $locals = array(
             'name' => 'Linus',
         );
@@ -62,6 +80,11 @@ class TransformerTest extends \PHPUnit_Framework_TestCase
     public function testGetName($name, $className, $fqcn)
     {
         $class = $fqcn;
+
+        if (!class_exists($class)) {
+            self::markTestSkipped('Renderer "'.$className.'" not installed');
+        }
+
         /** @var TransformerInterface $engine */
         $engine = new $class();
         self::assertEquals($name, $engine->getName());
@@ -75,15 +98,19 @@ class TransformerTest extends \PHPUnit_Framework_TestCase
      */
     public function engineProvider()
     {
-        self::markTestSkipped('PhpTransformer need to be tagged');
         $engines = array();
 
-        //$engines[] = array('smarty', 'SmartyTransformer', 'PhpTransformers\\Smarty\\SmartyTransformer');
-        //$engines[] = array('twig', 'TwigTransformer', 'PhpTransformers\\Twig\\TwigTransformer');
-        //$engines[] = array('latte', 'LatteTransformer', 'PhpTransformers\\Latte\\LatteTransformer');
-        //$engines[] = array('plates', 'PlatesTransformer', 'PhpTransformers\\Plates\\PlatesTransformer');
-        //$engines[] = array('string-template', 'StringTemplateTransformer', 'PhpTransformers\\StringTemplate\\StringTemplateTransformer');
-        //$engines[] = array('mustache', 'MustacheTransformer', 'PhpTransformers\\Mustache\\MustacheTransformer');
+        $engines[] = array('test', 'StrReplaceTransformer', 'PhpTransformers\\PhpTransformer\\Test\\Fixtures\\StrReplaceTransformer');
+        $engines[] = array('smarty', 'SmartyTransformer', 'PhpTransformers\\Smarty\\SmartyTransformer');
+        $engines[] = array('twig', 'TwigTransformer', 'PhpTransformers\\Twig\\TwigTransformer');
+        $engines[] = array('latte', 'LatteTransformer', 'PhpTransformers\\Latte\\LatteTransformer');
+        $engines[] = array('plates', 'PlatesTransformer', 'PhpTransformers\\Plates\\PlatesTransformer');
+        $engines[] = array('blade', 'BladeTransformer', 'PhpTransformers\\Blade\\BladeTransformer');
+        $engines[] = array('string-template', 'StringTemplateTransformer', 'PhpTransformers\\StringTemplate\\StringTemplateTransformer');
+        $engines[] = array('text-template', 'TextTemplateTransformer', 'PhpTransformers\\TextTemplate\\TextTemplateTransformer');
+        $engines[] = array('mustache', 'MustacheTransformer', 'PhpTransformers\\Mustache\\MustacheTransformer');
+        $engines[] = array('phptal', 'PHPTALTransformer', 'PhpTransformers\\PHPTAL\\PHPTALTransformer');
+        $engines[] = array('dwoo', 'DwooTransformer', 'PhpTransformers\\Dwoo\\DwooTransformer');
 
         return $engines;
     }
